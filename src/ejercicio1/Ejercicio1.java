@@ -1,6 +1,6 @@
 package ejercicio1;
 
-import java.util.function.Function;
+import java.util.function.*;
 
 public class Ejercicio1 {
 	
@@ -15,6 +15,14 @@ public class Ejercicio1 {
 	Predicate<Integer> p = new EsMayorDeEdad();
 
 	 System.out.println(p.test(20));*/
+	
+	Predicate<Integer> EsMayorDeEdad = new Predicate <Integer>(){
+		@Override
+		public boolean test(Integer edad) {
+			return edad>=18;
+		}
+	};
+	
 	
 	 Function<String, Integer> longitudTexto = new Function<String, Integer>() {
 		    @Override
@@ -32,5 +40,12 @@ public class Ejercicio1 {
 	 		System.out.println(texto);
 	 	}
 	 }*/
+		
+		Consumer<String> MostrarTexto=new Consumer<String>() {
+			@Override
+			public void accept(String texto) {
+				System.out.println(texto);
+			}
+		};
 
 }
